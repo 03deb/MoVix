@@ -24,12 +24,6 @@ function App() {
     genresCall();
   }, []);
 
-  // const apiTesting = () => {
-  //   fetchDataFromApi("/movie/popular").then((res) => {
-  //         console.log(res);
-  //         dispatch(getApiConfiguration(res));
-  //       });
-  // };
   const fetchApiConfig = async () => {
     try {
         const res = await fetchDataFromApi("/configuration");
@@ -45,7 +39,6 @@ function App() {
         dispatch(getApiConfiguration(url));
     } catch (error) {
         console.error(error);
-        // Handle the error as needed (e.g., show an error message to the user)
     }
   }; 
 
@@ -61,7 +54,7 @@ function App() {
 
       const data = await Promise.all(promises);
       console.log(data);
-      data.map(({genres}) => {
+      data?.map(({genres}) => {
         return genres.map((item) => (allGenres[item.id] = item))
       })
       
