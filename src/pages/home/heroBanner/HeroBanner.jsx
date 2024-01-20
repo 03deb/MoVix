@@ -38,7 +38,7 @@ const HeroBanner = () => {
             <div className="heroBannerContent">
                 <span className="title">Welcome.</span>
                 <span className="subTitle">
-                    Millions of movies,TV shows and people 
+                    Millions of movies,TV shows and series 
                     to discover. 
                     Explore Now.
                 </span>
